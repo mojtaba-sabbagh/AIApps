@@ -1,0 +1,117 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hey",
+        "How are you",
+        "Is anyone there?",
+        "Hello",
+        "Good day"
+      ],
+      "responses": [
+        "Hey :-)",
+        "Hello, thanks for visiting",
+        "Hi there, what can I do for you?",
+        "Hi there, how can I help?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "See you later", "Goodbye"],
+      "responses": [
+        "See you later, thanks for visiting",
+        "Have a nice day",
+        "Bye! Come back again soon."
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
+      "responses": ["Happy to help!", "Any time!", "My pleasure"]
+   
+    },
+    {
+      "tag": "payments",
+      "patterns": [
+        "Do you take credit cards?",
+        "Do you accept Mastercard?",
+        "Can I pay with Paypal?",
+        "Are you cash only?"
+      ],
+      "responses": [
+        "We accept VISA, Mastercard and Paypal",
+        "We accept most major credit cards, and Paypal"
+      ]
+    },
+    {
+      "tag": "delivery",
+      "patterns": [
+        "How long does delivery take?",
+        "How long does shipping take?",
+        "When do I get my delivery?"
+      ],
+      "responses": [
+        "Delivery takes 2-4 days",
+        "Shipping takes 2-4 days"
+      ]
+    },
+    {
+      "tag": "funny",
+      "patterns": [
+        "Tell me a joke!",
+        "Tell me something funny!",
+        "Do you know a joke?"
+      ],
+      "responses": [
+        "Why did the hipster burn his mouth? He drank the coffee before it was cool.",
+        "What did the buffalo say when his son left for college? Bison."
+      ]
+    },
+    {
+      "tag": "Dress", 
+      "patterns":[
+        " Marc Loire Womens Gucci.",
+        " Solid Single Blazer For Men Black"
+
+      ],
+      "responses":[
+        "https://vault.anah.ae/products?category=women-shoes-heels.",
+        "https://vault.anah.ae/products/random-stripe-solid-single-blazer-for-men-black."
+      ]
+    },
+    {
+      "tag": "shoes",
+      "patterns": [
+        "adidas man RACER TR23 SHOES",
+        "adidas women RACER TR23 SHOES"
+      ],
+      "responses": [
+        "https://www.adidas.ae/en/ozweego-og-shoes/IG3037.html",
+        "https://www.adidas.ae/en/racer-tr23-shoes/IG7323.html"
+      ]
+    },
+    {
+       "tag": "TSHIRT",
+       "patterns":[
+        "TEXTURED T-SHIRT",
+        "RIB NECK T-SHIRT",
+        "RIBBED TEXTURED T-SHIRT",
+        "BASIC LIGHTWEIGHT T-SHIRT",
+        "SWEATSHIRT WITH CONTRAST EMBROID"
+
+       ],
+       "responses":[
+        "https://www.zara.com/ae/en/textured-t-shirt-p00761417.html?v1=330482592&v2=2297854",
+        "https://www.zara.com/ae/en/rib-neck-t-shirt-p04442451.html?v1=287611100&v2=2297854",
+        "https://www.zara.com/ae/en/ribbed-textured-t-shirt-p00526340.html?v1=290017584&v2=2297854",
+        "https://www.zara.com/ae/en/basic-lightweight-t-shirt-p01887440.html?v1=267200836&v2=2297854",
+        "https://zara.com/ae/en/sweatshirt-with-contrast-embroidery-p06224293.html?v1=305676448&v2=2297854"
+       ]
+
+    }
+      ]
+    }
+  
+

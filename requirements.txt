@@ -1,0 +1,6 @@
+sklearn
+torch
+django-ninja
+PIL
+img2vec_pytorch
+pickle
