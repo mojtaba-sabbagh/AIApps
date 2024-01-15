@@ -1,5 +1,6 @@
 sklearn
 torch
+django
 django-ninja
 PIL
 img2vec_pytorch
