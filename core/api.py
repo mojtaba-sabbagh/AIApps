@@ -9,6 +9,7 @@ from ninja.files import UploadedFile
 from sklearn.metrics.pairwise import cosine_similarity
 import io
 from chatbot.chat import chat_func
+from sentiment.init_senti_model import sentiment_task
 
 top_k = min(5, len(corpus))
 api = NinjaAPI()
@@ -45,3 +46,8 @@ def image_search(request, file: UploadedFile = File(...)):
 @api.get("/chatbot", response=Hit)
 def chat(request, query: str):
     return chat_func(query)
+
+@api.get("/sentiment", response=Hit)
+def senti_func(request, query: str):
+    senti = sentiment_task(query)[0]
+    return {"posting": senti['label'], "score": senti['score']}
