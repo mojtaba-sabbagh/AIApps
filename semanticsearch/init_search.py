@@ -8,7 +8,7 @@ from sentence_transformers import util
 embedder = SentenceTransformer ('all-MiniLM-L6-V2')
 module_dir = os.path.dirname(__file__)  # get current directory
 file_path = os.path.join(module_dir, 'items.txt')
-fp = open(file_path)
+fp = open(file_path, encoding='UTF-8')
 
 corpus = fp.readlines()
 corpus_embeddings = embedder.encode(corpus, convert_to_tensor=True)
