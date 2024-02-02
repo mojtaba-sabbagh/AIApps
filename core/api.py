@@ -49,5 +49,5 @@ def chat(request, query: str):
 
 @api.get("/sentiment", response=Hit)
 def senti_func(request, query: str):
-    senti = sentiment_task(query)[0]
-    return {"posting": senti['label'], "score": senti['score']}
+    #senti = sentiment_task(query)[0]
+    return sentiment_task(query)
