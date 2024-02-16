@@ -4,7 +4,7 @@ from PIL import Image
 import pickle
 from pathlib import Path
 
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent
 input_path = 'images'
 vectors_file = 'image_vectors.pkl'
 print("Getting vectors for test images...\n")
