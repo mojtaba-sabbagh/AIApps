@@ -17,7 +17,7 @@ tags = []
 xy = []
 # loop through each sentence in our intents patterns
 for intent in intents['intents']:
-    tag = intent['tag']
+    tag = intent['tag'].strip()
     # add to tag list
     tags.append(tag)
     for pattern in intent['patterns']:
@@ -58,7 +58,7 @@ num_epochs = 1000
 batch_size = 8
 learning_rate = 0.001
 input_size = len(X_train[0])
-hidden_size = 8
+hidden_size = 128
 output_size = len(tags)
 print(input_size, output_size)
 

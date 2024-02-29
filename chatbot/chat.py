@@ -52,4 +52,4 @@ def chat_func(sentence):
             if tag == intent["tag"]:
                 return {"posting": f"{bot_name}: {random.choice(intent['responses'])}", "score": prob.item()}
     else:
-        return {"posting": f"{bot_name}: I do not understand...", "score": 1.0}
+        return {"posting": f"{bot_name}: I do not understand...", "score": prob.item()}

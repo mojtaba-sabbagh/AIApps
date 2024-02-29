@@ -1,117 +1,184 @@
 {
-  "intents": [
-    {
-      "tag": "greeting",
-      "patterns": [
-        "Hi",
-        "Hey",
-        "How are you",
-        "Is anyone there?",
-        "Hello",
-        "Good day"
-      ],
-      "responses": [
-        "Hey :-)",
-        "Hello, thanks for visiting",
-        "Hi there, what can I do for you?",
-        "Hi there, how can I help?"
-      ]
-    },
-    {
-      "tag": "goodbye",
-      "patterns": ["Bye", "See you later", "Goodbye"],
-      "responses": [
-        "See you later, thanks for visiting",
-        "Have a nice day",
-        "Bye! Come back again soon."
-      ]
-    },
-    {
-      "tag": "thanks",
-      "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
-      "responses": ["Happy to help!", "Any time!", "My pleasure"]
-   
-    },
-    {
-      "tag": "payments",
-      "patterns": [
-        "Do you take credit cards?",
-        "Do you accept Mastercard?",
-        "Can I pay with Paypal?",
-        "Are you cash only?"
-      ],
-      "responses": [
-        "We accept VISA, Mastercard and Paypal",
-        "We accept most major credit cards, and Paypal"
-      ]
-    },
-    {
-      "tag": "delivery",
-      "patterns": [
-        "How long does delivery take?",
-        "How long does shipping take?",
-        "When do I get my delivery?"
-      ],
-      "responses": [
-        "Delivery takes 2-4 days",
-        "Shipping takes 2-4 days"
-      ]
-    },
-    {
-      "tag": "funny",
-      "patterns": [
-        "Tell me a joke!",
-        "Tell me something funny!",
-        "Do you know a joke?"
-      ],
-      "responses": [
-        "Why did the hipster burn his mouth? He drank the coffee before it was cool.",
-        "What did the buffalo say when his son left for college? Bison."
-      ]
-    },
-    {
-      "tag": "Dress", 
-      "patterns":[
-        " Marc Loire Womens Gucci.",
-        " Solid Single Blazer For Men Black"
-
-      ],
-      "responses":[
-        "https://vault.anah.ae/products?category=women-shoes-heels.",
-        "https://vault.anah.ae/products/random-stripe-solid-single-blazer-for-men-black."
-      ]
-    },
-    {
-      "tag": "shoes",
-      "patterns": [
-        "adidas man RACER TR23 SHOES",
-        "adidas women RACER TR23 SHOES"
-      ],
-      "responses": [
-        "https://www.adidas.ae/en/ozweego-og-shoes/IG3037.html",
-        "https://www.adidas.ae/en/racer-tr23-shoes/IG7323.html"
-      ]
-    },
-    {
-       "tag": "TSHIRT",
-       "patterns":[
-        "TEXTURED T-SHIRT",
-        "RIB NECK T-SHIRT",
-        "RIBBED TEXTURED T-SHIRT",
-        "BASIC LIGHTWEIGHT T-SHIRT",
-        "SWEATSHIRT WITH CONTRAST EMBROID"
-
-       ],
-       "responses":[
-        "https://www.zara.com/ae/en/textured-t-shirt-p00761417.html?v1=330482592&v2=2297854",
-        "https://www.zara.com/ae/en/rib-neck-t-shirt-p04442451.html?v1=287611100&v2=2297854",
-        "https://www.zara.com/ae/en/ribbed-textured-t-shirt-p00526340.html?v1=290017584&v2=2297854",
-        "https://www.zara.com/ae/en/basic-lightweight-t-shirt-p01887440.html?v1=267200836&v2=2297854",
-        "https://zara.com/ae/en/sweatshirt-with-contrast-embroidery-p06224293.html?v1=305676448&v2=2297854"
-       ]
-
-    }
-      ]
-    }
+    "intents":[    
+{
+    "tag":"track",
+    "patterns":[
+      "How can I track my order on the website or app?"
+    ],
+    "responses":[
+      "You will be notified step-by-step on your opulent selection."
+    ] 
+  },
+  {
+    "tag":"Sales",
+    "patterns":[
+      "Are there any upcoming sales or promotions that I should be aware of?"
+    ],
+    "responses":[
+      "Our customers are the number 1 priority, we strive to communicate the latest and most attractive sales and promotions by notifying you as soon as possible."
+    ]
+  },
+  {
+  "tag":"promotions",
+  "patterns":[
+    "Are there any upcoming sales or promotions that I should be aware of?" 
+  ],
+  "responses":[
+    "Our customers are the number 1 priority, we strive to communicate the latest and most attractive sales and promotions by notifying you as soon as possible."
+  ]
+  },
+  {
+  "tag":"Discount code",
+  "patterns":[
+    "Can you guide me on how to apply a discount code during checkout?"
+  ],
+  "responses":[
+    "Certainly, once a product is on sale or if you have a discount code you will be able to apply it to your cart. At checkout you will be asked to provide the code if you have one, and it will instantly be applied to your purchase."
+  ]
+  },
+  {
+  "tag":"payment methods ",
+  "patterns":[
+    "What payment methods are accepted on the website or app."
+  ],
+  "responses":[
+    "We accept all major credit cards such as Visa and Mastercard, customers are our priority, therefore we have partnered with the best network provider with cutting-edge technology for payments."
+  ]
+  },
+  {
+  "tag":"loyalty program",
+  "patterns":[
+    "Is there a loyalty program, and how does it work?"
+  ],
+  "responses":[
+    "As of now we regret to inform you that there is no loyalty program, however if one should be established in the future. Our customers are the first to be informed."
+  ]
+  },
+  {
+  "tag":"account preferences",
+  "patterns":[
+    "How can I set up and manage my account preferences?"
   
-
+  ],
+  "responses":[
+    "Our platform is easy to use, you’ll be able to set your preferences and manage them through settings in your profile."
+  ]
+  },
+  {
+  "tag":"return and exchange policy ",
+  "patterns":[
+    "Can you help me understand the return and exchange policy for my purchase?"
+  ],
+  "responses":[
+    "Of course! For pre-loved items, a no return policy applies. As for other products, you will be able to manage all returns and exchanges through the profile/more section of the platform."
+  ]
+  },
+  {
+  "tag":"virtual try-on options ",
+  "patterns":[
+    "Are there virtual try-on options available for products like luxury sunglasses or accessories?"
+  ],
+  "responses":[
+    "Unfortunately, this feature is not available"
+  ]
+  },
+  {
+  "tag":"New arrivals and limited edition",
+  "patterns":[
+    "How often are new arrivals or limited edition items added to the inventory?"
+  ],
+  "responses":[
+    "New arrivals are regularly added as and when they’re available, limited editions will be added to our inventory and ready for sale to customers as soon as possible."
+  ]
+  },
+  {
+  "tag":"materials used ",
+  "patterns":[
+    "Can you provide more details about the materials used in a specific luxury product?"
+  ],
+  "responses":[
+    "Details about the materials used in the listed products are available in the description section of the products. Our top priority is helping our customers know as much as they can about all the products they wish to purchase."
+  ]
+  },
+  {
+  "tag":"pre-ordering ",
+  "patterns":[
+    "What is the process for pre-ordering upcoming luxury releases?"
+  ],
+  "responses":[
+    "Pre-ordering goods would be exclusive to a selected curation of limited edition products, information for which will be provided to our customers. "
+  ]
+  },
+  {
+  "tag":"customization options ",
+  "patterns":[
+    "Are there any customization options available for products like monogramming or engraving?"
+  ],
+  "responses":[
+    "Unfortunately, we do not offer this service."
+  ]
+  },
+  {
+  "tag":"Notifications",
+  "patterns":[
+    "How can I receive notifications about restocks for sold-out items?"
+  ],
+  "responses":[
+    "You will be notified promptly through the app as well as through email."
+  ]
+  },
+  {
+  "tag":"sizing information ",
+  "patterns":[
+    "Can you assist me with sizing information for different product categories?"
+  ],
+  "responses":[
+    "All information pertaining to sizing and related measurement conversions can be accessed while viewing the product. There are sizing charts available for the products."
+  ]
+  },
+  {
+  "tag":"waitlist ",
+  "patterns":[
+    "Is there a waitlist feature for high-demand products?"
+  ],
+  "responses":[
+    "For certain highly sought-after products, a waitlist might be introduced to assure the best level of service to all of our clients. "
+  ]
+  },
+  {
+  "tag":"Personal and payment information",
+  "patterns":[
+    "What measures are in place to ensure the security of personal and payment information?"
+  ],
+  "responses":[
+    "Our platform uses cutting-edge, industry-grade technologies that safeguard all personal information pertaining to our users. It is our top priority to ensure the safety and trust of users when personal and payment information is provided. "
+  ]
+  },
+  {
+    "tag":"wishlist",
+  "patterns":[
+    "Can I save items to a wishlist for future reference? "
+  ],
+  "responses":[
+    "Of course, our customers can keep products on their wishlist for future reference. However, we can’t guarantee the product will be available at a later date. "
+  ]
+  },
+  {
+    "tag":"sales",
+    "patterns":[
+        "Are there any upcoming sales or promotions that I should be aware of?"
+    ],
+    "responses":[
+        "Our customers are the number 1 priority, we strive to communicate the latest and most attractive sales and promotions by notifying you as soon as possible."
+    ]
+  },
+  {
+    "tag":"promotions",
+    "patterns":[
+        "Are there any upcoming sales or promotions that I should be aware of?"
+    ],
+    "responses":"Our customers are the number 1 priority, we strive to communicate the latest and most attractive sales and promotions by notifying you as soon as possible."
+  }
+  
+    ]
+}
