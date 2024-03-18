@@ -7,25 +7,43 @@ from transformers import AutoTokenizer, AutoConfig
 import numpy as np
 from scipy.special import softmax
 
+POSITIVE = 'positive'
+NEGATIVE = 'negative'
+NEUTRAL = 'neutral'
+MODEL = f"cardiffnlp/twitter-roberta-base-sentiment-latest"
 
-def sentiment_task(text):
-    # Preprocess text (username and link placeholders)
-    MODEL = f"cardiffnlp/twitter-roberta-base-sentiment-latest"
-    tokenizer = AutoTokenizer.from_pretrained(MODEL)
-    config = AutoConfig.from_pretrained(MODEL)
-    # PT
-    model = AutoModelForSequenceClassification.from_pretrained(MODEL)
-    encoded_input = tokenizer(text, return_tensors='pt')
-    output = model(**encoded_input)
-    scores = output[0][0].detach().numpy()
-    scores = softmax(scores)
+class SentimentTask(object):
+    def __init__(self, MODEL) -> None:
+        self.tokenizer = AutoTokenizer.from_pretrained(MODEL)
+        self.config = AutoConfig.from_pretrained(MODEL)
+        self.model = AutoModelForSequenceClassification.from_pretrained(MODEL)
+        return
+    def __call__(self, text):
+        # Preprocess text (username and link placeholders)
+        total_score = 0
+        top_class = NEUTRAL
+        no_comm = 0
+        for comm in text.split('|||'):
+            no_comm += 1
+            comm_class, comm_score = self.calculate_sent(comm)
+            if comm_class == POSITIVE:
+                total_score += comm_score
+            elif comm_class == NEGATIVE:
+                total_score -= comm_score
 
-    top_class = np.argmax(scores)
-    return {"posting": config.id2label[top_class], "score": scores[top_class]}
+        if total_score > 0:
+            top_class = POSITIVE
+        elif total_score < 0:
+            top_class = NEGATIVE
+
+        return {"posting": top_class, "score": abs(total_score) / no_comm}
     
-    top_class = np.argmax(scores)
-    ranking = ranking[::-1]
-    for i in range(scores.shape[0]):
-        l = config.id2label[ranking[i]]
-        s = scores[ranking[i]]
-        print(f"{i+1}) {l} {np.round(float(s), 4)}")
+    def calculate_sent(self, text):
+        encoded_input = self.tokenizer(text, return_tensors='pt')
+        output = self.model(**encoded_input)
+        scores = output[0][0].detach().numpy()
+        scores = softmax(scores)
+        top_class = np.argmax(scores)
+        return self.config.id2label[top_class], scores[top_class]
+
+sentiment_task = SentimentTask(MODEL)
