@@ -16,7 +16,6 @@ def mkdate(datestr):
 parser = argparse.ArgumentParser()
 parser.add_argument('xDate',type=mkdate)
 args = parser.parse_args()
-print(args.xDate.tm_year)
 
 with open('aws-config.yaml', 'r') as file:
     aws_service = yaml.safe_load(file)
