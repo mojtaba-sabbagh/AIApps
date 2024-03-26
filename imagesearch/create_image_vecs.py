@@ -24,6 +24,11 @@ def image2vectors():
         pickle.dump(pics, outp, pickle.HIGHEST_PROTOCOL)
     return
 
+
 if __name__ == "__main__":
     #os.environ.setdefault("DJANGO_SETTINGS_MODULE", "semanticsearch.settings")
     image2vectors()
+
+
+
+
