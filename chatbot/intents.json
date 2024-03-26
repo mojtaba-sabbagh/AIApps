@@ -1,184 +1,938 @@
 {
-    "intents":[    
-{
-    "tag":"track",
-    "patterns":[
-      "How can I track my order on the website or app?"
-    ],
-    "responses":[
-      "You will be notified step-by-step on your opulent selection."
-    ] 
-  },
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hey",
+        "How are you",
+        "Is anyone there?",
+        "Hello",
+        "Good day"
+      ],
+      "responses": [
+        "Hello, welcome to Vault by AnaH. How may we be of assistance? ",
+        "Hi there, what can I do for you?",
+        "Hello there, how can I help?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "See you later", "Goodbye"],
+      "responses": [
+        "See you soon, thanks for visiting",
+        "Have a nice day",
+        "Bye! Come back again soon."
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
+      "responses": ["Happy to help!", "Any time!", "My pleasure"]
+    },
+    {
+      "tag": "delivery",
+      "patterns": [
+        "How long does delivery take?",
+        "How long does shipping take?",
+        "When do I get my delivery?"
+      ],
+      "responses": [
+        "Depending on the location you have provided, the delivery may take 2-4 days",
+        "Shipping can take 2-4 days depending on your registered address"
+      ]
+    },
+    {
+      "tag": "Dress", 
+      "patterns":[
+        " Marc Loire Womens Gucci.",
+        " Solid Single Blazer For Men Black"
+
+      ],
+      "responses":[
+        "https://vault.anah.ae/products?category=women-shoes-heels.",
+        "https://vault.anah.ae/products/random-stripe-solid-single-blazer-for-men-black."
+      ]
+    },
+    {
+      "tag": "shoes",
+      "patterns": [
+        "adidas man RACER TR23 SHOES",
+        "adidas women RACER TR23 SHOES"
+      ],
+      "responses": [
+        "https://www.adidas.ae/en/ozweego-og-shoes/IG3037.html",
+        "https://www.adidas.ae/en/racer-tr23-shoes/IG7323.html"
+      ]
+    },
+    {
+       "tag": "TSHIRT",
+       "patterns":[
+        "TEXTURED T-SHIRT",
+        "RIB NECK T-SHIRT",
+        "RIBBED TEXTURED T-SHIRT",
+        "BASIC LIGHTWEIGHT T-SHIRT",
+        "SWEATSHIRT WITH CONTRAST EMBROID"
+
+       ],
+       "responses":[
+        "https://www.zara.com/ae/en/textured-t-shirt-p00761417.html?v1=330482592&v2=2297854",
+        "https://www.zara.com/ae/en/rib-neck-t-shirt-p04442451.html?v1=287611100&v2=2297854",
+        "https://www.zara.com/ae/en/ribbed-textured-t-shirt-p00526340.html?v1=290017584&v2=2297854",
+        "https://www.zara.com/ae/en/basic-lightweight-t-shirt-p01887440.html?v1=267200836&v2=2297854",
+        "https://zara.com/ae/en/sweatshirt-with-contrast-embroidery-p06224293.html?v1=305676448&v2=2297854"
+       ]
+        
+    },
+    {
+      "tag":"track",
+      "patterns":[
+        "How can I track my order on the website or app?"
+      ],
+      "responses":[
+        "You will be notified step-by-step on your opulent selection."
+      ] 
+    },
   {
-    "tag":"Sales",
+    "tag":"promotions",
     "patterns":[
-      "Are there any upcoming sales or promotions that I should be aware of?"
+      "Are there any upcoming sales or promotions that I should be aware of?" 
     ],
     "responses":[
       "Our customers are the number 1 priority, we strive to communicate the latest and most attractive sales and promotions by notifying you as soon as possible."
     ]
   },
   {
-  "tag":"promotions",
-  "patterns":[
-    "Are there any upcoming sales or promotions that I should be aware of?" 
-  ],
-  "responses":[
-    "Our customers are the number 1 priority, we strive to communicate the latest and most attractive sales and promotions by notifying you as soon as possible."
-  ]
+    "tag":"Discount code",
+    "patterns":[
+      "Can you guide me on how to apply a discount code during checkout?"
+    ],
+    "responses":[
+      "Certainly, once a product is on sale or if you have a discount code you will be able to apply it to your cart. At checkout you will be asked to provide the code if you have one, and it will instantly be applied to your purchase."
+    ]
   },
   {
-  "tag":"Discount code",
-  "patterns":[
-    "Can you guide me on how to apply a discount code during checkout?"
-  ],
-  "responses":[
-    "Certainly, once a product is on sale or if you have a discount code you will be able to apply it to your cart. At checkout you will be asked to provide the code if you have one, and it will instantly be applied to your purchase."
-  ]
+    "tag":"payment methods ",
+    "patterns":[
+      "What payment methods are accepted on the website or app."
+    ],
+    "responses":[
+      "We accept all major credit cards such as Visa and Mastercard, customers are our priority, therefore we have partnered with the best network provider with cutting-edge technology for payments."
+    ]
   },
   {
-  "tag":"payment methods ",
-  "patterns":[
-    "What payment methods are accepted on the website or app."
-  ],
-  "responses":[
-    "We accept all major credit cards such as Visa and Mastercard, customers are our priority, therefore we have partnered with the best network provider with cutting-edge technology for payments."
-  ]
+    "tag":"loyalty program",
+    "patterns":[
+      "Is there a loyalty program, and how does it work?"
+    ],
+    "responses":[
+      "As of now we regret to inform you that there is no loyalty program, however if one should be established in the future. Our customers are the first to be informed."
+    ]
   },
   {
-  "tag":"loyalty program",
-  "patterns":[
-    "Is there a loyalty program, and how does it work?"
-  ],
-  "responses":[
-    "As of now we regret to inform you that there is no loyalty program, however if one should be established in the future. Our customers are the first to be informed."
-  ]
+    "tag":"account preferences",
+    "patterns":[
+      "How can I set up and manage my account preferences?"
+
+    ],
+    "responses":[
+      "Our platform is easy to use, you'll be able to set your preferences and manage them through settings in your profile."
+    ]
   },
   {
-  "tag":"account preferences",
-  "patterns":[
-    "How can I set up and manage my account preferences?"
-  
-  ],
-  "responses":[
-    "Our platform is easy to use, you’ll be able to set your preferences and manage them through settings in your profile."
-  ]
+    "tag":"return and exchange policy ",
+    "patterns":[
+      "Can you help me understand the return and exchange policy for my purchase?"
+    ],
+    "responses":[
+      "Of course! For pre-loved items, a no return policy applies. As for other products, you will be able to manage all returns and exchanges through the profile/more section of the platform."
+    ]
   },
   {
-  "tag":"return and exchange policy ",
-  "patterns":[
-    "Can you help me understand the return and exchange policy for my purchase?"
-  ],
-  "responses":[
-    "Of course! For pre-loved items, a no return policy applies. As for other products, you will be able to manage all returns and exchanges through the profile/more section of the platform."
-  ]
+    "tag":"virtual try-on options ",
+    "patterns":[
+      "Are there virtual try-on options available for products like luxury sunglasses or accessories?"
+    ],
+    "responses":[
+      "Unfortunately, this feature is not available"
+    ]
   },
   {
-  "tag":"virtual try-on options ",
-  "patterns":[
-    "Are there virtual try-on options available for products like luxury sunglasses or accessories?"
-  ],
-  "responses":[
-    "Unfortunately, this feature is not available"
-  ]
+    "tag":"New arrivals",
+    "patterns":[
+      "How often are new arrivals or limited edition items added to the inventory?"
+    ],
+    "responses":[
+      "New arrivals are regularly added as and when they’re available, limited editions will be added to our inventory and ready for sale to customers as soon as possible."
+    ]
   },
   {
-  "tag":"New arrivals and limited edition",
-  "patterns":[
-    "How often are new arrivals or limited edition items added to the inventory?"
-  ],
-  "responses":[
-    "New arrivals are regularly added as and when they’re available, limited editions will be added to our inventory and ready for sale to customers as soon as possible."
-  ]
+    "tag":"materials used ",
+    "patterns":[
+      "Can you provide more details about the materials used in a specific luxury product?"
+    ],
+    "responses":[
+      "Details about the materials used in the listed products are available in the description section of the products. Our top priority is helping our customers know as much as they can about all the products they wish to purchase."
+    ]
   },
   {
-  "tag":"materials used ",
-  "patterns":[
-    "Can you provide more details about the materials used in a specific luxury product?"
-  ],
-  "responses":[
-    "Details about the materials used in the listed products are available in the description section of the products. Our top priority is helping our customers know as much as they can about all the products they wish to purchase."
-  ]
+    "tag":"pre-ordering ",
+    "patterns":[
+      "What is the process for pre-ordering upcoming luxury releases?"
+    ],
+    "responses":[
+      "Pre-ordering goods would be exclusive to a selected curation of limited edition products, information for which will be provided to our customers. "
+    ]
   },
   {
-  "tag":"pre-ordering ",
-  "patterns":[
-    "What is the process for pre-ordering upcoming luxury releases?"
-  ],
-  "responses":[
-    "Pre-ordering goods would be exclusive to a selected curation of limited edition products, information for which will be provided to our customers. "
-  ]
+    "tag":"customization options ",
+    "patterns":[
+      "Are there any customization options available for products like monogramming or engraving?"
+    ],
+    "responses":[
+      "Unfortunately, we do not offer this service."
+    ]
   },
   {
-  "tag":"customization options ",
-  "patterns":[
-    "Are there any customization options available for products like monogramming or engraving?"
-  ],
-  "responses":[
-    "Unfortunately, we do not offer this service."
-  ]
+    "tag":"Notifications",
+    "patterns":[
+      "How can I receive notifications about restocks for sold-out items?"
+    ],
+    "responses":[
+      "You will be notified promptly through the app as well as through email."
+    ]
   },
   {
-  "tag":"Notifications",
-  "patterns":[
-    "How can I receive notifications about restocks for sold-out items?"
-  ],
-  "responses":[
-    "You will be notified promptly through the app as well as through email."
-  ]
+    "tag":"sizing information ",
+    "patterns":[
+      "Can you assist me with sizing information for different product categories?"
+    ],
+    "responses":[
+      "All information pertaining to sizing and related measurement conversions can be accessed while viewing the product. There are sizing charts available for the products."
+    ]
   },
   {
-  "tag":"sizing information ",
-  "patterns":[
-    "Can you assist me with sizing information for different product categories?"
-  ],
-  "responses":[
-    "All information pertaining to sizing and related measurement conversions can be accessed while viewing the product. There are sizing charts available for the products."
-  ]
+    "tag":"waitlist ",
+    "patterns":[
+      "Is there a waitlist feature for high-demand products?"
+    ],
+    "responses":[
+      "For certain highly sought-after products, a waitlist might be introduced to assure the best level of service to all of our clients. "
+    ]
   },
   {
-  "tag":"waitlist ",
-  "patterns":[
-    "Is there a waitlist feature for high-demand products?"
-  ],
-  "responses":[
-    "For certain highly sought-after products, a waitlist might be introduced to assure the best level of service to all of our clients. "
-  ]
-  },
-  {
-  "tag":"Personal and payment information",
-  "patterns":[
-    "What measures are in place to ensure the security of personal and payment information?"
-  ],
-  "responses":[
-    "Our platform uses cutting-edge, industry-grade technologies that safeguard all personal information pertaining to our users. It is our top priority to ensure the safety and trust of users when personal and payment information is provided. "
-  ]
+    "tag":"Personal and payment information",
+    "patterns":[
+      "What measures are in place to ensure the security of personal and payment information?"
+    ],
+    "responses":[
+      "Our platform uses cutting-edge, industry-grade technologies that safeguard all personal information pertaining to our users. It is our top priority to ensure the safety and trust of users when personal and payment information is provided. "
+    ]
   },
   {
     "tag":"wishlist",
-  "patterns":[
-    "Can I save items to a wishlist for future reference? "
-  ],
-  "responses":[
-    "Of course, our customers can keep products on their wishlist for future reference. However, we can’t guarantee the product will be available at a later date. "
-  ]
-  },
-  {
-    "tag":"sales",
     "patterns":[
-        "Are there any upcoming sales or promotions that I should be aware of?"
+      "Can I save items to a wishlist for future reference? "
     ],
     "responses":[
-        "Our customers are the number 1 priority, we strive to communicate the latest and most attractive sales and promotions by notifying you as soon as possible."
+      "Of course, our customers can keep products on their wishlist for future reference. However, we can’t guarantee the product will be available at a later date. "
     ]
   },
   {
-    "tag":"promotions",
+    "tag":"international shipping ",
     "patterns":[
-        "Are there any upcoming sales or promotions that I should be aware of?"
+      "How does the website or app handle international shipping and customs?"
     ],
-    "responses":"Our customers are the number 1 priority, we strive to communicate the latest and most attractive sales and promotions by notifying you as soon as possible."
-  }
-  
+    "responses":[
+      "We provide international shipping for our customers, and our team will update you if there are any matters relating to customs."
     ]
-}
+  },
+  {
+    "tag":"product care tips ",
+    "patterns":[
+      "Are there product care tips or guides available for maintaining luxury items?"
+    ],
+    "responses":[
+      "In the spirit of best serving our customers, information regarding product care tips or guides is available in the description section."
+    ]
+  },
+  {
+    "tag":"Recommend",
+    "patterns":[
+      "Can you recommend complementary products based on my previous purchases or preferences?"
+    ],
+    "responses":[
+      "Of course! You will have recommendations available to you based on your previous purchases."
+    ]
+  },
+  {
+    "tag":"Sign up for newsletters",
+    "patterns":[
+      "How can I sign up for newsletters or alerts to stay informed about new arrivals?"
+    ],
+    "responses":[
+      "You can stay informed by signing up for our newsletters, through our website, or through the app. You can easily sign up by adding your information. Stay tuned, and enjoy!"
+    ]
+  },
+  {
+    "tag":"Virtual events",
+    "patterns":[
+      "Are there any virtual events or launches that customers can participate in?"
+    ],
+    "responses":[
+      "All virtual events or launches will be communicated to our customers as and when applicable."
+    ]
+  },
+  {
+    "tag":"Creating",
+    "patterns":[
+      "Can you guide me through the process of creating and managing a gift registry?"
+    ],
+    "responses":[
+      "Unfortunately, we do not offer this service at this moment."
+    ]
+  },
+  {
+    "tag":"Technical issues",
+    "patterns":[
+      "What steps can I take if I encounter technical issues while using the websiteor app?"
+    ],
+    "responses":[
+      "Please contact customer support through Vaultsupport@anah.ae; a specialist will contact you as soon as possible."
+    ]
+  },
+  {
+    "tag":"Mobile app",
+    "patterns":[
+      "Is there a mobile app available, and what additional features does it offer?"
+    ],
+    "responses":[
+      "Download our app through the App Store or through the Google Play Store, and indulge yourself in the convenience of what our website offers on your mobile device. You’ll be able to browse for pre-loved products, add them to your wishlist, and track your orders at the convenience of your device. Pay using Apple Pay or Google Pay seamlessly."
+    ]
+  },
+  {
+    "tag":"Reserving items ",
+    "patterns":[
+      "can I reserve items for a limited time before purchase?"
+    ],
+    "responses":[
+      "Unfortunately, we do not offer this service"
+    ]
+
+  },
+  {
+    "tag":"Before purchase",
+    "patterns":[
+      "Can you explain the process of reserving items for a limited time before purchase?"
+    ],
+    "responses":[
+      "Unfortunately, we do not offer this service"
+    ]
+  },
+  {
+    "tag":"Backorders",
+    "patterns":[
+      "How does the website or app handle backorders for out-of-stock items?"
+    ],
+    "responses":[
+      "If a product is out-of-stock and the item is on your wishlist, you will be notified as soon as the item is available."
+    ]
+  },
+  {
+    "tag":"Exclusive online-only",
+    "patterns":[
+      "Are there any exclusive online-only products or collections?"
+    ],
+    "responses":[
+      "All products that are offered have been carefully curated while keeping our customers in-mind. Exclusive products, whether limited edition or exclusive, will be notified to our customers."
+    ] 
+  },
+  {
+    "tag":"Virtual consultation",
+    "patterns":[
+      "Can I schedule a virtual consultation for personalized shopping advice?"
+    ],
+    "responses":[
+      "If offered, virtual consultation for personalized shopping would be available through the convenience of the app. "
+    ]
+  },
+  {
+    "tag":"Design",
+    "patterns":[
+      "What information is available about the craftsmanship and design of a specific luxury item?"
+    ],
+    "responses":[
+      "Details pertaining to the craftsmanship and design of all products are available in the description section of the product. Our top priority is helping our customers know as much as they can about all the products they wish to purchase."
+    ]
+  },
+  {
+    "tag":"Membership programs",
+    "patterns":[
+      "Are there any membership programs with additional perks for loyal customers?"
+    ],
+    "responses":[
+      "Unfortunately, membership programs are not offered at this moment."
+    ]
+  },
+  {
+    "tag":"No longer be visible",
+    "patterns":[
+      "Can you assist me in locating items that may no longer be visible on the website?"
+    ],"responses":[
+      "Certainly, for products you wish to purchase that may no longer be visible on our platform, please forward your inquiry to inquiryvault@anah.ae, and a member of our team will help make your wish a reality."
+    ]
+  },
+  {
+    "tag":"Data privacy",
+    "patterns":[
+      "What measures are in place to ensure secure transactions and data privacy?"
+    ],
+    "responses":[
+      "We hold data privacy and the security of transactions at top priority; therefore, we have industry-grade solutions that ensure the safety of all information on the platform."
+    ]
+  },
+  {
+    "tag":"Save multiple shipping addresses",
+    "patterns":[
+      "Is there a feature to save multiple shipping addresses for convenience?"
+    ],
+    "responses":[
+      "Yes, you will be able to add multiple shipping addresses for your convenience. However, please note that once an item is out for shipping, it can only be delivered to one address per order. For high-value products, please ensure proper identification is in place in order to avoid any mishaps."
+    ]
+  },
+  {
+    "tag":"waitlist ",
+    "patterns":[
+      "Can you explain the process of joining a waitlist for pre-order or high-demand items?"
+    ],
+    "responses":[
+      "Once a sought-after product has been listed, customers will have the opportunity to show their interest by joining a waitlist. Your interest will be registered, and should the product be available to you, you will be notified promptly."
+    ]
+  },
+  {
+    "tag":"Product reviews",
+    "patterns":[
+      "How often are product reviews updated on the website for customer reference?"
+    ],
+    "responses":[
+      "Product and customer reviews are handled carefully by a dedicated team, which strives to achieve the highest level of customer experience and satisfaction."
+    ]
+  },
+  {
+    "tag":"Size guides",
+    "patterns":[
+      "Are there size guides available for international customers using different measurement standards?"
+    ],
+    "responses":[
+      "Definitely, guides are available for international customers. All information pertaining to sizing and related measurement conversions can be accessed while viewing the product. There are sizing charts available for the products."
+    ]
+  },
+  {
+    "tag":"Gift wrapping",
+    "patterns":[
+      "What options are there for gift wrapping or packaging customization?"
+    ],
+    "responses":[
+      "Unfortunately, we do not offer this service."
+    ]
+  },
+  {
+    "tag":"Product releases",
+    "patterns":[
+      "How does the website or app handle product releases in different time zones?"
+    ],
+    "responses":[
+      "Some product releases are regional; for the sake of a smoother experience for our clients, we address concerns related to time zone differences by putting forth additional measurements that aim at facilitating the most user-friendly approach. We include advanced notification measures together with global release schedules that approach the most user-friendly method."
+    ]
+  },
+  {
+    "tag":"feedback",
+    "patterns":[
+      "How can I share my feedback or suggestions for improving the website or app?"
+    ],
+    "responses":[
+      "Product and customer reviews are handled carefully by a dedicated team, which strives to achieve the highest level of customer experience and satisfaction. "
+    ]
+  },
+  {
+    "tag":"Collaborate",
+    "patterns":[
+      "Is there a feature for customers to collaborate on curated collections or looks?"
+    ],
+    "responses":[
+      "For any collaborations, please contact us through inquiryvault@anah.ae, and a member of the team will be glad to assist."
+    ]
+  },
+  {
+    "tag":"Loyalty points",
+    "patterns":[
+      "Can you guide me on how to redeem loyalty points or store credits online?"
+    ],
+    "responses":[
+      "Unfortunately, loyalty programs are not offered at this moment."
+    ]
+  },
+  {
+    "tag":"Certificate of authenticity",
+    "patterns":[
+      "Can you explain the process of obtaining a certificate of authenticity for certain products?"
+    ],
+    "responses":[
+      "Unfortunately, we do not offer this service at this moment."
+    ]
+  },
+  {
+    "tag":"Manage my order",
+    "patterns":[
+      "How can l access and manage my order history and receipts on the website or app?"
+    ],
+    "responses":[
+      "In the profile section of the platform, there is a tab where you will be able to manage your order history and view your receipts through both the website and app."
+    ]
+  },
+  {
+    "tag":"Luxury trends",
+    "patterns":[
+      "Are there any online tools or resources for customers to learn more about luxury trends?"
+    ],
+    "responses":[
+      "Luxury trends and collections will be shared through our newsletter; please feel free to signup for your insight into the luxury world."
+    ]
+  },
+  {
+    "tag":"Specific price range",
+    "patterns":[
+      "Can you assist me in finding products within a specific price range?"
+    ],
+    "responses":[
+      "Of course! There are filters put in place where you will be able to find products according to your specific price range."
+    ]
+  },
+  {
+    "tag":"Subscription-based",
+    "patterns":[
+      "Are there any subscription-based services or boxes offered for luxury items?"
+    ],
+    "responses":[
+      "Unfortunately, we do not offer this service at this moment."
+    ]
+  },
+  {
+    "tag":"Checkout experience",
+    "patterns":[
+      "What measures are in place for secure and seamless checkout experiences?"
+    ],
+    "responses":[
+      "Our platform uses cutting-edge, industry-grade technologies that safeguard all personal information pertaining to our users. It is our top priority to ensure the safety and trust of users when personal and payment information is provided. "
+    ]
+  },
+  {
+    "tag":"Augmented reality",
+    "patterns":[
+      "Can you guide me on using augmented reality features for virtual product try-ons?"
+    ],
+    "responses":[
+      "Unfortunately, we do not offer this service at this moment."
+    ]
+  },
+  {
+    "tag":"Upcoming collaborations",
+    "patterns":[
+      "How can I stay informed about upcoming collaborations or designer partnerships?"
+    ],
+    "responses":[
+      "You will be informed about upcoming collaborations or partnerships through advanced notification measures that ensure a seamless experience for you."
+    ]
+  },
+  {
+    "tag":"Online exclusive",
+    "patterns":[
+      "Are there any online exclusives or early access opportunities for certain customers?"
+    ],
+    "responses":[
+      "Early access  to a selected selection of limited edition products will be provided to eligible customers. "
+    ]
+  },
+  {
+    "tag":"Environmental sustainability initiatives",
+    "patterns":[
+      "Can you provide details about the environmental sustainability initiatives of the brand?"
+    ],
+    "responses":[
+      "Brands that are involved in environmentally sustainable initiatives would be listed in the description section of their products."
+    ]
+  },
+  {
+    "tag":"Customer reviews ",
+    "patterns":[
+      "How can I access and utilize customer reviews and ratings when making a purchase decision?"
+    ],
+    "responses":[
+      "Product and customer reviews are handled carefully by a dedicated team, which strives to achieve the highest level of customer experience and satisfaction. "
+    ]
+  },
+  {
+    "tag":"International customers",
+    "patterns":[
+      "Are there any restrictions or considerations for internationalcustomers when making returns? "
+    ],
+    "responses":[
+      "Please review the returns policy. For any other queries, please contact customer support through Vaultsupport@anah.ae; a specialist will be in touch as soon as possible."
+    ]
+  },
+  {
+    "tag":"Booking virtual appointments",
+    "patterns":[
+      "Can you explain the process of booking virtual appointments with personal shoppers?"
+    ],
+    "responses":[
+      "If offered, virtual appointments with personal shoppers would be available through the convenience of the app. "
+    ]
+  },
+  {
+    "tag":"made-to-order ",
+    "patterns":[
+      "What level of customization is available for made-to-order or bespoke items?"
+    ],
+    "responses":[
+      "Unfortunately, we do not offer this service."
+    ]
+  },
+  {
+    "tag":"releases communicated ",
+    "patterns":[
+      "How are product launches or releases communicated to customers in advance?"
+    ],
+    "responses":[
+      "Curated limited edition product launches or releases will be notified to eligible customers in advance."
+    ]
+  },
+  {
+    "tag":"complementary accessories ",
+    "patterns":[
+      "Can you assist me with recommendations for complementary accessories for a specific item?"
+    ],
+    "responses":[
+      "Unfortunately, we do not offer this service"
+    ]
+  },
+  {
+    "tag":"brand's heritage",
+    "patterns":[
+      "What resources are available for customers interested in learning about the brand's heritage?"
+    ],
+    "responses":[
+      "Relevant information pertaining to brands is available on the platform."
+    ]
+  },
+  {
+    "tag":"product recalls ",
+    "patterns":[
+      "How does the website or app handle product recalls or updates?"
+    ],
+    "responses":[
+      "You will be notified promptly through the app as well as through email, as we strive to achieve customer satisfaction."
+    ]
+  },
+  {
+    "tag":"partnerships ",
+    "patterns":[
+      "Are there any partnerships with influencers or celebrities that influence product offerings?"
+    ],
+    "responses":[
+      "For any collaborations, please contact us through inquiryvault@anah.ae, and a member of the team will be glad to assist."
+    ]
+  },
+  {
+    "tag":"augmented reality ",
+    "patterns":[
+      "Can you guide me on using the brand's mobile app for augmented reality experiences?"
+    ],
+    "responses":[
+      "Unfortunately, we do not offer this service at this moment."
+    ]
+  },
+  {
+    "tag":"New content ",
+    "patterns":[
+      "How often is the website or app updated with new content or features?"
+    ],
+    "responses":[
+      "New content and features on the website and app are regularly updated to ensure an ongoing, seamless experience for our customers."
+    ]
+  },
+  {
+    "tag":"live chats ",
+    "patterns":[
+      "Are there any interactive features like live chats or forums for customer engagement?"
+    ],
+    "responses":[
+      "Please contact us through inquiryvault@anah.ae, and a member of the team will be glad to assist."
+    ]
+  },
+  {
+    "tag":"Availability",
+    "patterns":[
+      "Can you provide information on product availability in different colors or variations?"
+    ],
+    "responses":[
+      "All information related to product availability in different colors or variations is displayed on the platform."
+    ]
+  },
+  {
+    "tag":"Restocks",
+    "patterns":[
+      "How does the brand handle limited edition product restocks or re-releases?"
+    ],
+    "responses":[
+      "If there is a restock or re-release of limited edition products, customers will be promptly notified."
+    ]
+  },
+  {
+    "tag":"Wishlist",
+    "patterns":[
+      "Can you guide me through the process of setting up and managing a wish list?"
+    ],
+    "responses":[
+      "For products that you’re thinking of getting but not at the moment, we offer the ability to add them to a wishlist, whereby you can re-visit your selection at any given time. Just look for a heart icon for whichever product you are browsing; once selected, it will automatically be added to your wish list. You will always be able to go back to it at your convenience; just look out for the heart icon."
+    ]
+  },
+  {
+    "tag":"Promotions",
+    "patterns":[
+      "What steps can I take to stay informed about flash sales or time-limited promotions?"
+    ],
+    "responses":[
+      "Our customers are our number one priority, and we strive to communicate the latest and most attractive sales and promotions by notifying you as soon as possible."
+    ]
+  },
+  {
+    "tag":"Authenticity",
+    "patterns":[
+      "How does the brand ensure the authenticity of its vintage or pre-owned items?"
+    ],
+    "responses":[
+      "The company operates a rigorous authentication process whereby measures are implemented to assure the highest level of verification. However, due to the nature of the products, the company can’t guarantee that all products will have Certificates of Authentication."
+    ]
+  },
+  {
+    "tag":"Care guides",
+    "patterns":[
+      "Can you assist me in finding product care guides or instructions for specific items?"
+    ],
+    "responses":[
+      "In the spirit of best serving our customers, information regarding product care tips or guides is available in the description section."
+    ]
+  },
+  {
+    "tag":"Corporate gifting ",
+    "patterns":[
+      "What options are available for customers interested in corporate gifting?"
+    ],
+    "responses":[
+      "Please contact us through inquiryvault@anah.ae, and a member of the team will be glad to assist."
+    ]
+  },
+  {
+    "tag":"Notification",
+    "patterns":[
+      "How does the website or app handle the notification preferences for account holders?"
+    ],
+    "responses":[
+      "You will have the ability to choose whether you would like to receive notifications through email or through the app. Please ensure your notification button is switched on so you may enjoy the latest news as well as any future promotions."
+    ]
+  },
+  {
+    "tag":"Loyalty",
+    "patterns":[
+      "Can you explain the process of applying for a loyalty program or membership?"
+    ],
+    "responses":[
+      "Unfortunately, we do not offer this service at this moment."
+    ]
+  },
+  {
+    "tag":"Virtual sizing assistant ",
+    "patterns":[
+      "How can I access and use the virtual sizing assistant for clothing and accessories?"
+    ],
+    "responses":[
+      "Unfortunately, we do not offer this service at this moment."
+    ]
+  },
+  {
+    "tag":"Ethical sourcing ",
+    "patterns":[
+      "Can you provide information on the brand's commitment to ethical sourcing and production?"
+    ],
+    "responses":[
+      "We partner with world-renowned brands, each of which has its own sourcing and production commitments. However, whatever information about the brand’s commitment to ethical sourcing and production would be provided in the description section of their product should it be available."
+    ]
+  },
+  {
+    "tag":"Creative curated looks",
+    "patterns":[
+      " Are there any online tools or guides to help customers create curated looks or outfits?"
+    ],
+    "responses":[
+      "Unfortunately, we do not offer this service at this moment."
+    ]
+  },
+  {
+    "tag":"Wishlisted",
+    "patterns":[
+      "How does the website or app handle product availability notifications for wishlisted items?"
+    ],
+    "responses":[
+      "You will be informed about the availability of wishlisted items through advanced notification measures that ensure a seamless experience for you."
+    ]
+  },
+  {
+    "tag":"Search filters",
+    "patterns":[
+      "Can you guide me on using the search filters effectively to find specific products?"
+    ],
+    "responses":[
+      "Of course! There are filters put in place where you will be able to find products according to brand, collection, men/women, etc. Alternatively, you can utilize the search button, type what you’re looking for, and if it is available, you will be able to select it with ease."
+    ]
+  },
+  {
+    "tag":"Online events",
+    "patterns":[
+      "What level of personalization is available for online orders, such as monogramming or engraving?"
+    ],
+    "responses":[
+      "Unfortunately, we do not offer this service at this moment."
+    ]
+  },
+  {
+    "tag":"loyalty",
+    "patterns":[
+      "Are there any exclusives or early access opportunities for members of the loyalty program?"
+    ],
+    "responses":[
+      "Unfortunately, we do not offer loyalty programs at this moment."
+    ]
+  },
+  {
+    "tag":"Online events",
+    "patterns":[
+      "How can I participate in online events or workshops hosted by the brand?"
+    ],
+    "responses":[
+      "Unfortunately, we do not offer this service at this moment."
+    ]
+  },
+  {
+    "tag":"Diversity",
+    "patterns":[
+      "Can you provide details on the brand's approach to inclusivity and diversity in its product offerings?"
+    ],
+    "responses":[
+      "Certainly! The platform prioritizes inclusivity and diversity by offering a broad product range with inclusive sizing. We celebrate diversity in our marketing, featuring a range of models and individuals."
+    ]
+  },
+  {
+    "tag":"Collaborations",
+    "patterns":[
+      "How are product launches or collaborations with influencers communicated to customers?"
+    ],
+    "responses":[
+      "You will be informed about product launches or collaborations with influencers through advanced notification measures that ensure a seamless experience for you."
+    ]
+  },
+  {
+    "tag":"Origin",
+    "patterns":[
+      "Can you assist me with finding information on the product's origin and craftsmanship?"
+    ],
+    "responses":[
+      "Details pertaining to the craftsmanship and origin of all products are available in the description section of the product. Our top priority is helping our customers know as much as they can about all the products they wish to purchase."
+    ]
+  },
+  {
+    "tag":"Gift wrapping",
+    "patterns":[
+      "What options are available for customers interested in gift wrapping or personalized messages?"
+    ],
+    "responses":[
+      "Unfortunately, we do not offer this service."
+    ]
+  },
+  {
+    "tag":"Pre-orders",
+    "patterns":[
+      "How does the website or app handle pre-orders for items that are not yet released?"
+    ],
+    "responses":[
+      "You will be notified promptly through the app as well as through email, as we strive to achieve customer satisfaction."
+    ]
+  },
+  {
+    "tag":"Shop the look",
+    "patterns":[
+      "Can you guide me on using the Shop the Look feature to recreate specific styles?"
+    ],
+    "responses":[
+      "Unfortunately, we do not offer this service at this moment."
+    ]
+  },
+  {
+    "tag":"Different currencies",
+    "patterns":[
+      "Are there any restrictions or considerations for customers using different currencies?"
+    ],
+    "responses":[
+      "Products are charged in Arab Emirate Dirhams (A.E.D.); as such, the appropriate conversion rate will be applied when using different currencies."
+    ]
+  },
+  {
+    "tag":"Style guides ",
+    "patterns":[
+      "How can I access and utilize the brand's style guides or fashion trend predictions?"
+    ],
+    "responses":[
+      "Unfortunately, we do not offer this service at this moments."
+    ]
+  },
+  {
+    "tag":"Sustainability",
+    "patterns":[
+      "Can you provide information on the brand's approach to sustainability in packaging?"
+    ],
+    "responses":[
+      "Brands that are involved in environmentally sustainable initiatives would be listed in the description section of their products."
+    ]
+  },
+  {
+    "tag":"Price adjustments",
+    "patterns":[
+      "How does the website or app handle price adjustments for items purchased before a sale?"
+    ],
+    "responses":[
+      "The website or app facilitates price adjustments for items purchased before a sale by offering a grace period during which customers can request and receive a refund of the price difference in store credits."
+    ]
+  },
+  {
+    "tag":"Taxes",
+    "patterns":[
+      "Are there any specific policies for international customers regarding taxes and duties?"
+    ],
+    "responses":[
+      "We provide international shipping for our customers, and our team will update you if there are any matters relating to taxes and duties."
+    ]
+  },
+  {
+    "tag":"Newsletters",
+    "patterns":[
+      "Can you explain the process of subscribing to newsletters for exclusive updates and offers?"
+    ],
+    "responses":[
+      "You can stay informed by signing up for our newsletters, through our website, or through the app. You can easily sign up by adding your information. Stay tuned, and enjoy!"
+    ]
+  }
+      ]
+    }
+  
+  
+
