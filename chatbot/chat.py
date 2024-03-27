@@ -8,6 +8,7 @@ module_dir = os.path.dirname(__file__)  # get current directory
 
 from .model import NeuralNet
 from .nltk_utils import bag_of_words, tokenize
+THERESHOLD = 0.60
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
@@ -47,7 +48,7 @@ def chat_func(sentence):
 
     probs = torch.softmax(output, dim=1)
     prob = probs[0][predicted.item()]
-    if prob.item() > 0.75:
+    if prob.item() > THERESHOLD:
         for intent in intents['intents']:
             if tag == intent["tag"]:
                 return {"posting": f"{bot_name}: {random.choice(intent['responses'])}", "score": prob.item()}
