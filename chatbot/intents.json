@@ -112,7 +112,7 @@
     ]
   },
   {
-    "tag":"payment methods ",
+    "tag":"payment methods",
     "patterns":[
       "What payment methods are accepted on the website or app."
     ],
@@ -140,7 +140,7 @@
     ]
   },
   {
-    "tag":"return and exchange policy ",
+    "tag":"return and exchange policy",
     "patterns":[
       "Can you help me understand the return and exchange policy for my purchase?"
     ],
@@ -149,7 +149,7 @@
     ]
   },
   {
-    "tag":"virtual try-on options ",
+    "tag":"virtual try-on options",
     "patterns":[
       "Are there virtual try-on options available for products like luxury sunglasses or accessories?"
     ],
@@ -167,7 +167,7 @@
     ]
   },
   {
-    "tag":"materials used ",
+    "tag":"materials used",
     "patterns":[
       "Can you provide more details about the materials used in a specific luxury product?"
     ],
@@ -176,7 +176,7 @@
     ]
   },
   {
-    "tag":"pre-ordering ",
+    "tag":"pre-ordering",
     "patterns":[
       "What is the process for pre-ordering upcoming luxury releases?"
     ],
@@ -185,7 +185,7 @@
     ]
   },
   {
-    "tag":"customization options ",
+    "tag":"customization options",
     "patterns":[
       "Are there any customization options available for products like monogramming or engraving?"
     ],
@@ -212,7 +212,7 @@
     ]
   },
   {
-    "tag":"waitlist ",
+    "tag":"waitlist",
     "patterns":[
       "Is there a waitlist feature for high-demand products?"
     ],
@@ -239,7 +239,7 @@
     ]
   },
   {
-    "tag":"international shipping ",
+    "tag":"international shipping",
     "patterns":[
       "How does the website or app handle international shipping and customs?"
     ],
@@ -311,7 +311,7 @@
     ]
   },
   {
-    "tag":"Reserving items ",
+    "tag":"Reserving items",
     "patterns":[
       "can I reserve items for a limited time before purchase?"
     ],
@@ -401,7 +401,7 @@
     ]
   },
   {
-    "tag":"waitlist ",
+    "tag":"waitlist",
     "patterns":[
       "Can you explain the process of joining a waitlist for pre-order or high-demand items?"
     ],
@@ -563,7 +563,7 @@
     ]
   },
   {
-    "tag":"Customer reviews ",
+    "tag":"Customer reviews",
     "patterns":[
       "How can I access and utilize customer reviews and ratings when making a purchase decision?"
     ],
@@ -590,7 +590,7 @@
     ]
   },
   {
-    "tag":"made-to-order ",
+    "tag":"made-to-order",
     "patterns":[
       "What level of customization is available for made-to-order or bespoke items?"
     ],
@@ -599,7 +599,7 @@
     ]
   },
   {
-    "tag":"releases communicated ",
+    "tag":"releases communicated",
     "patterns":[
       "How are product launches or releases communicated to customers in advance?"
     ],
@@ -608,7 +608,7 @@
     ]
   },
   {
-    "tag":"complementary accessories ",
+    "tag":"complementary accessories",
     "patterns":[
       "Can you assist me with recommendations for complementary accessories for a specific item?"
     ],
@@ -626,7 +626,7 @@
     ]
   },
   {
-    "tag":"product recalls ",
+    "tag":"product recalls",
     "patterns":[
       "How does the website or app handle product recalls or updates?"
     ],
@@ -635,7 +635,7 @@
     ]
   },
   {
-    "tag":"partnerships ",
+    "tag":"partnerships",
     "patterns":[
       "Are there any partnerships with influencers or celebrities that influence product offerings?"
     ],
@@ -644,7 +644,7 @@
     ]
   },
   {
-    "tag":"augmented reality ",
+    "tag":"augmented reality",
     "patterns":[
       "Can you guide me on using the brand's mobile app for augmented reality experiences?"
     ],
@@ -653,7 +653,7 @@
     ]
   },
   {
-    "tag":"New content ",
+    "tag":"New content",
     "patterns":[
       "How often is the website or app updated with new content or features?"
     ],
@@ -662,7 +662,7 @@
     ]
   },
   {
-    "tag":"live chats ",
+    "tag":"live chats",
     "patterns":[
       "Are there any interactive features like live chats or forums for customer engagement?"
     ],
@@ -725,7 +725,7 @@
     ]
   },
   {
-    "tag":"Corporate gifting ",
+    "tag":"Corporate gifting",
     "patterns":[
       "What options are available for customers interested in corporate gifting?"
     ],
@@ -752,7 +752,7 @@
     ]
   },
   {
-    "tag":"Virtual sizing assistant ",
+    "tag":"Virtual sizing assistant",
     "patterns":[
       "How can I access and use the virtual sizing assistant for clothing and accessories?"
     ],
@@ -761,7 +761,7 @@
     ]
   },
   {
-    "tag":"Ethical sourcing ",
+    "tag":"Ethical sourcing",
     "patterns":[
       "Can you provide information on the brand's commitment to ethical sourcing and production?"
     ],
@@ -887,7 +887,7 @@
     ]
   },
   {
-    "tag":"Style guides ",
+    "tag":"Style guides",
     "patterns":[
       "How can I access and utilize the brand's style guides or fashion trend predictions?"
     ],
