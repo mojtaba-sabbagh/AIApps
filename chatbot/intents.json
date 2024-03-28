@@ -114,7 +114,8 @@
   {
     "tag":"payment methods",
     "patterns":[
-      "What payment methods are accepted on the website or app."
+      "What payment methods are accepted on the website or app?",
+      "How can I pay?"
     ],
     "responses":[
       "We accept all major credit cards such as Visa and Mastercard, customers are our priority, therefore we have partnered with the best network provider with cutting-edge technology for payments."
