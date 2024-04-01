@@ -30,7 +30,7 @@ model = NeuralNet(input_size, hidden_size, output_size).to(device)
 model.load_state_dict(model_state)
 model.eval()
 
-bot_name = "Ali"
+bot_name = "Aria"
 def chat_func(sentence):
     # sentence = "do you use credit cards?"
     if sentence == "quit":
