@@ -18,6 +18,10 @@ class Hit(Schema):
     posting: str
     score: float
 
+@api.get("/", response=str)
+def home(request, query: str):
+    return "<h1> Hello World </h1>"
+
 @api.get("/search", response=List[Hit])
 def search(request, query: str):
     hit_outs = []
