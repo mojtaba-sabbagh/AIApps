@@ -36,7 +36,7 @@ def chat_func(sentence):
     if sentence == "quit":
         return {"posting": "Good bye!", "score": 1.0}
 
-    sentence = tokenize(sentence)
+    sentence = tokenize(sentence) 
     X = bag_of_words(sentence, all_words)
     X = X.reshape(1, X.shape[0])
     X = torch.from_numpy(X).to(device)

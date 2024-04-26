@@ -1,3 +1,5 @@
+.
+
 from typing import List
 from ninja import NinjaAPI, Schema
 from semanticsearch.init_search import util, embedder, corpus_embeddings, corpus
