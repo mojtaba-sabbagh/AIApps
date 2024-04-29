@@ -144,8 +144,7 @@
   {
     "tag":"return and exchange policy",
     "patterns":[
-      "Can you help me understand the return and exchange policy for my purchase?",
-      "Can you return my product?"
+      "Can you help me understand the return and exchange policy for my purchase?"
     ],
     "responses":[
       "Of course! For pre-loved items, a no return policy applies. As for other products, you will be able to manage all returns and exchanges through the profile/more section of the platform."
