@@ -11,7 +11,6 @@ import io
 from chatbot.chat import chat_func
 from sentiment.init_senti_model import sentiment_task
 
-top_k = min(5, len(corpus))
 api = NinjaAPI()
 img2vec = Img2Vec()
 class Hit(Schema):
@@ -26,6 +25,7 @@ def home(request, query: str):
 def search(request, query: str):
     hit_outs = []
     query_embedding = embedder.encode(query, convert_to_tensor=True)
+    top_k = min(10, len(corpus)) #
     hits = util.semantic_search(query_embedding, corpus_embeddings, top_k)
     hits = hits[0]
     for hit in hits:
@@ -42,8 +42,9 @@ def image_search(request, file: UploadedFile = File(...)):
 
     d_view = [(v, k) for k, v in sims.items()]
     d_view.sort(reverse=True)
+    top_k = min(10, len(d_view)) # Top_k for number of images found is set to 10
     hit_outs = []
-    for v, k in d_view:
+    for v, k in d_view[:top_k]:
         hit_outs.append({"posting": f"{request.scheme}://{request.get_host()}/static/{k}", "score": v})
     return hit_outs
 
