@@ -146,6 +146,7 @@
     "patterns":[
       "Can you help me understand the return and exchange policy for my purchase?", 
       "Can you return my product?"
+      
     ],
     "responses":[
       "Of course! For pre-loved items, a no return policy applies. As for other products, you will be able to manage all returns and exchanges through the profile/more section of the platform."
@@ -186,9 +187,9 @@
     "responses":[
       "Pre-ordering goods would be exclusive to a selected curation of limited edition products, information for which will be provided to our customers. "
     ]
-  },
-  {
-    "tag":"customization options",
+  },{
+ 
+     "tag":"customization options",
     "patterns":[
       "Are there any customization options available for products like monogramming or engraving?"
     ],
