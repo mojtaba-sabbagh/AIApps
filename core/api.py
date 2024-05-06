@@ -33,6 +33,7 @@ def search(request, query: str):
     return hit_outs
 
 @api.post("/imagesearch", response=List[Hit])
+
 def image_search(request, file: UploadedFile = File(...)):
     data = file.read()
     vec = img2vec.get_vec(Image.open(io.BytesIO(data)).convert('RGB'))
@@ -55,4 +56,4 @@ def chat(request, query: str):
 @api.get("/sentiment", response=Hit)
 def senti_func(request, query: str):
     #senti = sentiment_task(query)[0]
-    return sentiment_task(query)
+    return sentiment_task(query)                                                                                                          
