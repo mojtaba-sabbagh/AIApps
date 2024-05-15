@@ -5,7 +5,7 @@ import pickle
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent
-input_path = 'images'
+input_path = 'productImages'
 vectors_file = 'image_vectors.pkl'
 print("Getting vectors for test images...\n")
 img2vec = Img2Vec()
