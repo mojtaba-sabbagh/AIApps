@@ -6,10 +6,10 @@ def mongo_filter_images(images, top_k):
     products = []
     prod_ids = {}
     collection = database["products"]
-    for image, _ in images:
+    for _, image in images:
         if len(products) >= top_k:
             break
-
+        #print(f"{image_prefix}/{image}")
         results = collection.find({
                 "status": 'Published',
                 "uploadedFiles": {
