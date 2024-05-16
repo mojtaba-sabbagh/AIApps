@@ -1,5 +1,9 @@
 from core.mongo_connect import database
+import re
+
 image_prefix = "https://anah-v2.s3.amazonaws.com"
+
+
 
 def mongo_filter_images(images, top_k):
     """ filter images using mongodb """
@@ -9,12 +13,13 @@ def mongo_filter_images(images, top_k):
     for _, image in images:
         if len(products) >= top_k:
             break
-        #print(f"{image_prefix}/{image}")
+        image = "".join(image.split('.')[:-1])
+        regx = re.compile(f".*{image}.*", re.IGNORECASE)
         results = collection.find({
                 "status": 'Published',
                 "uploadedFiles": {
                     "$elemMatch": {
-                    "fileUrl": f"{image_prefix}/{image}"
+                    "fileUrl": regx #f"{image_prefix}/{image}"
                     }
                 }
             })        
