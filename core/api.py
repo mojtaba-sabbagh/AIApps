@@ -1,13 +1,9 @@
 from typing import List
 from ninja import NinjaAPI, Schema
 from semanticsearch.init_search import util, embedder, corpus_embeddings, corpus
-#from imagesearch.init_imagesearch import pics
 from img2vec_pytorch.img_to_vec import Img2Vec
-#from PIL import Image
 from ninja import File
 from ninja.files import UploadedFile
-#from sklearn.metrics.pairwise import cosine_similarity
-#import io
 from imagesearch.bin import imagesearch_base, filter_images
 
 from chatbot.chat import chat_func
@@ -42,22 +38,16 @@ def search(request, query: str):
         hit_outs.append({"posting": corpus[hit['corpus_id']], "score": hit['score']})
     return hit_outs
 
-@api.post("/imagesearch", response=List[Hit])
+image_prefix = "https://anah-v2.s3.amazonaws.com"
 
+@api.post("/imagesearch", response=List[Hit])
 def image_search(request, file: UploadedFile = File(...)):
     data = file.read()
     d_view = imagesearch_base(data)
-    #vec = img2vec.get_vec(Image.open(io.BytesIO(data)).convert('RGB'))
-    #sims = {}
-    #for key in list(pics.keys()):
-    #    sims[key] = cosine_similarity(vec.reshape((1, -1)), pics[key].reshape((1, -1)))[0][0]
-
-    #d_view = [(v, k) for k, v in sims.items()]
-    #d_view.sort(reverse=True)
     top_k = min(MAX_TOPK, len(d_view)) # Top_k for number of images found is set to 10
     hit_outs = []
     for v, k in d_view[:top_k]:
-        hit_outs.append({"posting": f"{request.scheme}://{request.get_host()}/static/{k}", "score": v})
+        hit_outs.append({"posting": f"{image_prefix}/{k}", "score": v})
     return hit_outs
 
 @api.post("/productimagesearch", response=List[PRODUCT])

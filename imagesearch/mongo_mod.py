@@ -1,8 +1,6 @@
 from core.mongo_connect import database
 import re
 
-image_prefix = "https://anah-v2.s3.amazonaws.com"
-
 
 
 def mongo_filter_images(images, top_k):
@@ -19,7 +17,7 @@ def mongo_filter_images(images, top_k):
                 "status": 'Published',
                 "uploadedFiles": {
                     "$elemMatch": {
-                    "fileUrl": regx #f"{image_prefix}/{image}"
+                    "fileUrl": regx 
                     }
                 }
             })        
