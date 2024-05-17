@@ -22,6 +22,7 @@ class PRODUCT(Schema):
     slug: str
     price: int
     salePrice: int
+    uploadedFiles: List[str]
 
 @api.get("/", response=str)
 def home(request, query: str):

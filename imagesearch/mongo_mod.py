@@ -24,8 +24,10 @@ def mongo_filter_images(images, top_k):
         for doc in results:
             if doc['_id'] not in prod_ids:
                 prod_ids[doc['_id']] = 1
+                file_urls = [uploaded_file["fileUrl"] for uploaded_file in doc["uploadedFiles"] ]
                 products.append({"title" : doc['title'], 
-                                           "slug" : doc['slug'],
-                                           "price" : doc['price'],
-                                           "salePrice" : doc['salePrice']})
+                                 "slug" : doc['slug'],
+                                 "price" : doc['price'],
+                                 "salePrice" : doc['salePrice'],
+                                 "uploadedFiles": file_urls})
     return products
