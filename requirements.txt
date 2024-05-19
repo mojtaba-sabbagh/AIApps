@@ -2,6 +2,7 @@ sklearn
 torch
 django
 django-ninja
-PIL
+pillow
 img2vec_pytorch
-pickle
+pickle5
+pymongo
