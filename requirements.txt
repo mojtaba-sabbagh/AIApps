@@ -6,3 +6,5 @@ pillow
 img2vec_pytorch
 pickle5
 pymongo
+dnspython
+sentence-transformers
