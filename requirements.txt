@@ -7,4 +7,6 @@ img2vec_pytorch
 pickle5
 pymongo
 dnspython
+python-dotenv
 sentence-transformers
+nltk
