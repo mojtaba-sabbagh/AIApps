@@ -4,7 +4,8 @@ from semanticsearch.init_search import util, embedder, corpus_embeddings, corpus
 from img2vec_pytorch.img_to_vec import Img2Vec
 from ninja import File
 from ninja.files import UploadedFile
-from imagesearch.bin import imagesearch_base, filter_images
+from augimagesearch.bin import filter_images, ImageCLSBase
+from imagesearch.bin import imagesearch_base
 
 from chatbot.chat import chat_func
 from sentiment.init_senti_model import sentiment_task
@@ -23,6 +24,9 @@ class PRODUCT(Schema):
     price: int
     salePrice: int
     uploadedFiles: List[str]
+    outOfStockDate: str
+    stockStatus: str
+    productLabels: str
 
 @api.get("/", response=str)
 def home(request, query: str):
@@ -67,3 +71,11 @@ def chat(request, query: str):
 def senti_func(request, query: str):
     #senti = sentiment_task(query)[0]
     return sentiment_task(query)                                                                                                          
+
+@api.post("/imagecls", response=Hit)
+def image_cls(request, file: UploadedFile = File(...)):
+    data = file.read()
+    classifier = ImageCLSBase()
+    predicted = classifier(data)
+    hit_out = {"posting": predicted[0], "score": predicted[1]}
+    return hit_out
