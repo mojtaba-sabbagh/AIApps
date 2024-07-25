@@ -14,6 +14,7 @@ product = {
     "outOfStockDate": None,
     "stockStatus": '',
     "productLabels": '',
+    "categories": []
 }
 collection = database["products"]
 collection_labels = database["productLabels"]
@@ -51,6 +52,7 @@ def mongo_filter_images(images, top_k):
                 empty_product["outOfStockDate"] = '' if doc['outOfStockDate'] is None else doc['outOfStockDate']
                 empty_product["stockStatus"] = doc['stockStatus']
                 empty_product["productLabels"] = extract_productLabels(doc['productLabels'])
+                empty_product["categories"] = doc['categories']
                 products.append(empty_product)
                 empty_product = product.copy()
     return products

@@ -5,7 +5,9 @@ class NeuralNetwork(nn.Module):
     def __init__(self, NC=9):
         super().__init__()
         self.linear_relu_stack = nn.Sequential(
-           nn.Linear(512, 1024),
+            nn.Linear(512, 1024),
+            nn.Tanh(),
+            nn.Linear(1024, 1024),
             nn.Tanh(),
             nn.Linear(1024, 512),
             nn.Tanh(),
