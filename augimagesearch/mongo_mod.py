@@ -49,7 +49,7 @@ def mongo_filter_images(images, top_k):
                 empty_product["price"] = doc['price']
                 empty_product["salePrice"] = doc['salePrice']
                 empty_product["uploadedFiles"] = file_urls
-                empty_product["outOfStockDate"] = '' if doc['outOfStockDate'] is None else doc['outOfStockDate']
+                empty_product["outOfStockDate"] = '' if doc['outOfStockDate'] is None else doc['outOfStockDate'].strftime('%Y/%m/%d')
                 empty_product["stockStatus"] = doc['stockStatus']
                 empty_product["productLabels"] = extract_productLabels(doc['productLabels'])
                 empty_product["categories"] = doc['categories']

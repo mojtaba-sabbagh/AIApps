@@ -6,6 +6,7 @@ from augimagesearch.mongo_mod import mongo_filter_images
 from pathlib import Path
 import os
 from augimagesearch.classification_model import NeuralNetwork
+from bson.objectid import ObjectId
 softmax = torch.nn.Softmax()
 
 Classifier_Model = os.path.join(Path(__file__).resolve().parent, "image_classification.pt")
@@ -13,15 +14,17 @@ Classifier_Model = os.path.join(Path(__file__).resolve().parent, "image_classifi
 img2vec = Img2Vec()
 default_classes = ['footware-m', 'shoes-w', 'abaya-w', 'accessories-m', 'accessories-w', 'bags-w', 'jewelry-w', 'clothing-w', 'clothing-m']
 class_map = {
-	"footware-m":["618e2ed9c8b3841218a4fff9"],
-	"shoes-w":["618bb3abf874370f109e7c45","618bb62cf874370f109e7c80"],
-	"abaya-w":["668d220228231a01e33b5664"],
-	"accessories-m":["612486185c1f5e0fc0393621"],
-	"accessories-w":["665837f9c610c06f936f17ce"],
-	"bags-w":["612484d45c1f5e0fc0393615","618bb26ff874370f109e7b39","618bb292f874370f109e7b3d"],
-	"jewelry-w":["id:66644ec735ade925eff6c0cf"],
-	"clothing-w":["6126259f7335225914b7ff11s","6126266e7335225914b7ff32","6194ca346b8e340f681c3704"],
-	"clothing-m":["6194c5666b8e340f681c3411"]
+	"footware-m":[ObjectId("618e2ed9c8b3841218a4fff9")],
+	"shoes-w":[ObjectId("618bb3abf874370f109e7c45"), ObjectId("618bb62cf874370f109e7c80")],
+	"abaya-w":[ObjectId("668d220228231a01e33b5664")],
+	"accessories-m":[ObjectId("612486185c1f5e0fc0393621")],
+	"accessories-w":[ObjectId("665837f9c610c06f936f17ce")],
+	"bags-w":[ObjectId("612484d45c1f5e0fc0393615"), ObjectId("618bb26ff874370f109e7b39"),
+              ObjectId("618bb292f874370f109e7b3d")],
+	"jewelry-w":[ObjectId("66644ec735ade925eff6c0cf")],
+	"clothing-w":[ObjectId("6126259f7335225914b7ff11"), ObjectId("6126266e7335225914b7ff32"),
+                  ObjectId("6194ca346b8e340f681c3704")],
+	"clothing-m":[ObjectId("6194c5666b8e340f681c3411")]
 }
 def filter_images(images, top_k):
     products = mongo_filter_images(images, top_k)
@@ -59,6 +62,8 @@ class ImageCLSBase(object):
         image_cls = self.predict(data)
         allowed_cats = self.class_map[image_cls]
         for prod in products:
+            print(prod["categories"])
+            print(allowed_cats)
             if self.__intersection(prod["categories"], allowed_cats):
                 filtered_products.append(prod)
         return filtered_products

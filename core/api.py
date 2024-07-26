@@ -62,7 +62,7 @@ def image_search(request, file: UploadedFile = File(...)):
     d_view = imagesearch_base(data)
     top_k = min(MAX_TOPK, len(d_view)) # Top_k for number of images found is set to 10
     products = filter_images(d_view, top_k)
-    #products = classifier.filter_by_type(products, data)
+    products = classifier.filter_by_type(products, data)
     return products
 
 @api.get("/chatbot", response=Hit)
