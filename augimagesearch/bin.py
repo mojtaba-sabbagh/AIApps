@@ -20,7 +20,7 @@ class_map = {
 	"accessories-m":[ObjectId("612486185c1f5e0fc0393621")],
 	"accessories-w":[ObjectId("665837f9c610c06f936f17ce")],
 	"bags-w":[ObjectId("612484d45c1f5e0fc0393615"), ObjectId("618bb26ff874370f109e7b39"),
-              ObjectId("618bb292f874370f109e7b3d")],
+              ObjectId("618bb292f874370f109e7b3d"), ObjectId("60c87bb0ee31952720fffd78")],
 	"jewelry-w":[ObjectId("66644ec735ade925eff6c0cf")],
 	"clothing-w":[ObjectId("6126259f7335225914b7ff11"), ObjectId("6126266e7335225914b7ff32"),
                   ObjectId("6194ca346b8e340f681c3704")],
