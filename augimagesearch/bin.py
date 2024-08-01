@@ -15,7 +15,8 @@ img2vec = Img2Vec()
 default_classes = ['footware-m', 'shoes-w', 'abaya-w', 'accessories-m', 'accessories-w', 'bags-w', 'jewelry-w', 'clothing-w', 'clothing-m']
 class_map = {
 	"footware-m":[ObjectId("618e2ed9c8b3841218a4fff9")],
-	"shoes-w":[ObjectId("618bb3abf874370f109e7c45"), ObjectId("618bb62cf874370f109e7c80")],
+	"shoes-w":[ObjectId("618bb3abf874370f109e7c45"), ObjectId("618bb62cf874370f109e7c80"),
+     ObjectId("60c87bb0ee31952720fffd78"), ObjectId("61234d9256cc6d05dc20117a")],
 	"abaya-w":[ObjectId("668d220228231a01e33b5664")],
 	"accessories-m":[ObjectId("612486185c1f5e0fc0393621")],
 	"accessories-w":[ObjectId("665837f9c610c06f936f17ce")],
