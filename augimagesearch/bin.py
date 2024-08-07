@@ -16,9 +16,7 @@ default_classes = ['footware-m', 'shoes-w', 'abaya-w', 'accessories-m', 'accesso
 class_map = {
 	"footware-m":[ObjectId("60c87d01ee31952720fffd79"), ObjectId("612485b55c1f5e0fc039361d"), ObjectId("618e2ed9c8b3841218a4fff9")],
 	"shoes-w":[ObjectId("60c87bb0ee31952720fffd78"), ObjectId("61234d9256cc6d05dc20117a"), ObjectId("61234d9256cc6d05dc20117a")],
-	"abaya-w":[ObjectId("668d220228231a01e33b5664"), ObjectId("618bb860f874370f109e7cf8"),
-     ObjectId("618bb860f874370f109e7cf8"), ObjectId("668d220228231a01e33b5664"), ObjectId("668d220228231a01e33b5664"),
-     ObjectId("618bb860f874370f109e7cf8"), ObjectId("668d220228231a01e33b5664"), ObjectId("618bb860f874370f109e7cf8")],
+	"abaya-w":[ObjectId("668d220228231a01e33b5664"), ObjectId("618bb860f874370f109e7cf8")],
 	"accessories-m":[ObjectId("618e30e7c8b3841218a5002b"), ObjectId("612486185c1f5e0fc0393621"),
                     ObjectId("6193a179ae2f5c09a807d3cc"),
                      
