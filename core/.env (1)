@@ -1,0 +1,4 @@
+MONGOUSERNAME = vault
+MONGOPASSWORD = NBjkQY8S4xLvE1cx
+MONGOHOST = vault.pzthpur.mongodb.net
+MONGODBNAME = vaultAnahStaging
