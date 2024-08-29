@@ -12,7 +12,7 @@ softmax = torch.nn.Softmax()
 Classifier_Model = os.path.join(Path(__file__).resolve().parent, "image_classification.pt")
 
 img2vec = Img2Vec()
-default_classes = ['footware-m', 'shoes-w', 'abaya-w', 'accessories-m', 'accessories-w', 'bags-w', 'jewelry-w', 'clothing-w', 'clothing-m']
+default_classes = ['footware-m', 'shoes-w', 'abaya-w', 'accessories-m', 'accessories-w', 'bags-w', 'jewelry-w', 'clothing-w', 'clothing-m','cosmatic-w']
 class_map = {
 	"footware-m":[ObjectId("60c87d01ee31952720fffd79"), ObjectId("612485b55c1f5e0fc039361d"), ObjectId("618e2ed9c8b3841218a4fff9")],
 	"shoes-w":[ObjectId("60c87bb0ee31952720fffd78"), ObjectId("61234d9256cc6d05dc20117a")],
