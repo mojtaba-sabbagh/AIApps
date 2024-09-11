@@ -18,7 +18,7 @@ class_map = {
 	"shoes-w":[ObjectId("60c87bb0ee31952720fffd78"), ObjectId("61234d9256cc6d05dc20117a")],
 	"abaya-w":[ObjectId("668d220228231a01e33b5664"), ObjectId("618bb860f874370f109e7cf8")],
 	"accessories-m":[ObjectId("618e30e7c8b3841218a5002b"), ObjectId("612486185c1f5e0fc0393621"), ObjectId("6193a179ae2f5c09a807d3cc")],
-	"accessories-w":[ObjectId ("60c87bb0ee31952720fffd78"), ObjectId("66644e0735ade925eff6c0a0"), ObjectId("665837f9c610c06f936f17ce")],
+	"accessories-w":[ObjectId("66644e0735ade925eff6c0a0"), ObjectId("665837f9c610c06f936f17ce")],
                   
 	"bags-w":[ObjectId("612484d45c1f5e0fc0393615"), ObjectId("618bb292f874370f109e7b3d")], 
 	"jewelry-w":[ObjectId("66644ec735ade925eff6c0cf")],
