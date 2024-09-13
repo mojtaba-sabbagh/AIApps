@@ -62,8 +62,8 @@ class ImageCLSBase(object):
         image_cls = self.predict(data)
         allowed_cats = self.class_map[image_cls]
         for prod in products:
-            print(prod["categories"])
-            print(allowed_cats)
+            #print(prod["categories"])
+            #print(allowed_cats)
             if self.__intersection(prod["categories"], allowed_cats):
                 filtered_products.append(prod)
         return filtered_products
