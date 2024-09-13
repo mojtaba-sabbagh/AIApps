@@ -12,8 +12,8 @@ MONGOHOST = os.getenv("MONGOHOST")
 MONGODBNAME = os.getenv("MONGODBNAME")
 
 try:
-    uri = f"mongodb+srv://{MONGOUSERNAME}:{MONGOPASSWORD}@{MONGOHOST}/" #{DBNAME}?connectTimeoutMS=300000&retryWrites=true&w=majority
-    #uri = "mongodb://localhost:27017/"
+    #uri = f"mongodb+srv://{MONGOUSERNAME}:{MONGOPASSWORD}@{MONGOHOST}/" #{DBNAME}?connectTimeoutMS=300000&retryWrites=true&w=majority
+    uri = "mongodb://localhost:27017/"
     client = MongoClient(uri)
 
     database = client[MONGODBNAME]
