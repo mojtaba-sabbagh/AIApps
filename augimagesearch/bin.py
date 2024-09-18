@@ -12,7 +12,7 @@ softmax = torch.nn.Softmax()
 Classifier_Model = os.path.join(Path(__file__).resolve().parent, "image_classification.pt")
 
 img2vec = Img2Vec()
-default_classes = ['footware-m', 'shoes-w', 'abaya-w', 'accessories-m', 'accessories-w', 'bags-w', 'jewelry-w', 'clothing-w', 'clothing-m','cosmatic-w']
+default_classes = ['footware-m', 'shoes-w', 'abaya-w', 'accessories-m', 'accessories-w', 'bags-w', 'jewelry-w', 'clothing-w', 'clothing-m','cosmatics']
 class_map = {
 	"footware-m":[ObjectId("612485b55c1f5e0fc039361d"), ObjectId("618e2ed9c8b3841218a4fff9")],
 	"shoes-w":[ObjectId("61234d9256cc6d05dc20117a")],
@@ -24,7 +24,8 @@ class_map = {
 	"jewelry-w":[ObjectId("66644ec735ade925eff6c0cf")],
 	"clothing-w":[ObjectId("6126259f7335225914b7ff11"), ObjectId("6126266e7335225914b7ff32"),
                  ObjectId("6194ca346b8e340f681c3704")],
-	"clothing-m":[ObjectId("6194c5666b8e340f681c3411")]
+	"clothing-m":[ObjectId("6194c5666b8e340f681c3411")],
+    "cosmetics":[ObjectId("66603eab844ecb6b0164e769")]
 }
 def filter_images(images, top_k):
     products = mongo_filter_images(images, top_k)
