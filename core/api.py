@@ -29,6 +29,9 @@ class PRODUCT(Schema):
     stockStatus: str
     productLabels: str
 
+class Error(Schema):
+    message: str
+
 @api.get("/", response=str)
 def home(request, query: str):
     return "<h1> Hello World </h1>"
@@ -46,23 +49,27 @@ def search(request, query: str):
 
 image_prefix = "https://anah-v2.s3.amazonaws.com"
 
-@api.post("/imagesearch", response=List[Hit])
+@api.post("/imagesearch", response={200: List[Hit], 404: Error})
 def image_search(request, file: UploadedFile = File(...)):
     data = file.read()
     d_view = imagesearch_base(data)
+    if len(d_view) == 0:
+        return 404, {"message": "No Image Matched."}
     top_k = min(MAX_TOPK, len(d_view)) # Top_k for number of images found is set to 10
     hit_outs = []
     for v, k in d_view[:top_k]:
         hit_outs.append({"posting": f"{image_prefix}/{k}", "score": v})
     return hit_outs
 
-@api.post("/productimagesearch", response=List[PRODUCT])
+@api.post("/productimagesearch", response={200: List[PRODUCT], 404: Error})
 def image_search(request, file: UploadedFile = File(...)):
     data = file.read()
     d_view = imagesearch_base(data)
     top_k = min(MAX_TOPK, len(d_view)) # Top_k for number of images found is set to 10
     products = filter_images(d_view, top_k)
     products = classifier.filter_by_type(products, data)
+    if len(products) == 0:
+        return 404, {"message": "No Product is Available."}
     return products
 
 @api.get("/chatbot", response=Hit)
