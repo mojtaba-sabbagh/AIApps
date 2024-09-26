@@ -17,7 +17,7 @@ product = {
     "categories": []
 }
 collection = database["products"]
-collection_labels = database["productLabels"]
+collection_labels = database["productlabels"]
 def mongo_filter_images(images, top_k):
     """ filter images using mongodb """
     empty_product = product.copy()
